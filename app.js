@@ -1,13 +1,18 @@
 let numeroSecreto = generarNumeroSecreto();
-console.log(numeroSecreto)
+
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML=document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
 }
 
-function intentoDeUsuario(){
-    alert('Funciona');
+function verificarIntento(){
+    let numeroUsuario = document.getElementById('valorUsuario').value;
+    console.log(numeroSecreto)
+    console.log(typeof(numeroSecreto))
+    console.log(numeroUsuario) 
+    console.log(typeof(numeroUsuario))
+    console.log(numeroSecreto === numeroUsuario)
     return;
 }
 
