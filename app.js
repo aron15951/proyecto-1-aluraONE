@@ -7,12 +7,16 @@ function asignarTextoElemento(elemento, texto){
 }
 
 function verificarIntento(){
-    let numeroUsuario = document.getElementById('valorUsuario').value;
-    console.log(numeroSecreto)
-    console.log(typeof(numeroSecreto))
-    console.log(numeroUsuario) 
-    console.log(typeof(numeroUsuario))
-    console.log(numeroSecreto === numeroUsuario)
+    let numeroUsuario = parseInt(document.getElementById('valorUsuario').value);
+    if (numeroUsuario === numeroSecreto) {
+        asignarTextoElemento('p', 'Acertaste el numero secreto');
+    } else {
+        if (numeroUsuario > numeroSecreto) {
+            asignarTextoElemento('p', 'El numero es menor');
+        } else {
+            asignarTextoElemento('p', 'El numero es mayor');
+        }
+    }
     return;
 }
 
